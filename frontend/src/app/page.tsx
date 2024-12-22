@@ -3,7 +3,7 @@
 // Import required libraries
 import React, { useState } from "react";
 import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const API_URL = 'http://localhost:4000';
 
@@ -51,8 +51,8 @@ function App() {
       <header className="App-header">
         <h1 className="handjet" style={{ marginTop: 100, fontSize: "5em" }}>Unzipper</h1>
       </header>
-        <input type="file" className="form-control" id="inputFile" />
-        <button onClick={handleUpload} style={{ marginTop: "10px" }} className="btn btn-light">
+        <input type="file" className="form-control" style={{ width: "50%" }} />
+        <button onClick={handleUpload} style={{ marginTop: "10px" }} className="btn btn-dark">
           Prześlij plik
         </button>
     </div>
