@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, Response } from "express";
 import fileUpload from "express-fileupload";
-import FilesRouter from "./routers/files.ts";
+import FilesRouter from "./routers/files.js";
 import cors from "cors";
 
 const app = express();

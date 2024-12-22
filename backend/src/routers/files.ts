@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getFiles, uploadFile } from "../handlers/files.ts";
+import { getFiles, uploadFile } from "../handlers/files.js";
 
 const router = Router();
 

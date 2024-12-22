@@ -37,11 +37,10 @@ function App() {
       } else {
         alert("File upload failed. Please try again.");
       }
-    } catch (error) {
-      alert("An error occurred while uploading the file.");
+    } catch (_err) {
+      const err = _err as Error;
+      alert(`An error occurred while uploading the file. ${err.message}`);
     }
-
-    setSelectedFile(null);
   };
 
   return (
@@ -59,7 +58,7 @@ function App() {
           Unzipper
         </h1>
       </header>
-      <input type="file" className="form-control" style={{ width: "50%" }} />
+      <input type="file" className="form-control" style={{ width: "50%" }} onChange={handleFileChange}/>
       <button
         onClick={handleUpload}
         style={{ marginTop: "10px" }}
