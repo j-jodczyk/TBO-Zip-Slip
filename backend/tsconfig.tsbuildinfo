@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/dtos/UploadFile.dto.ts","./src/handlers/files.ts","./src/routers/files.ts","./src/types/query-params.ts","./src/types/response.ts"],"version":"5.7.2"}
