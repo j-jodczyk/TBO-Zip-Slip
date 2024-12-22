@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Handjet } from "next/font/google";
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 const handjet = Handjet({
-  subsets: ['latin'],
-  weight: '500',
-  variable: '--font-handjet'
+  subsets: ["latin"],
+  weight: "500",
+  variable: "--font-handjet",
 });
 
 export const metadata: Metadata = {

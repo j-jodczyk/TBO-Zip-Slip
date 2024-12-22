@@ -3,7 +3,7 @@ import { UploadedFile } from "express-fileupload";
 import fs from "fs";
 import path from "path";
 import AdmZip from "adm-zip";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,7 +28,9 @@ export async function uploadFile(
     }
 
     if (!file.name.endsWith(".zip")) {
-        return response.status(400).send({ message: "Only .zip files are allowed." });
+        return response
+            .status(400)
+            .send({ message: "Only .zip files are allowed." });
     }
 
     const tempZipPath = path.join(__dirname, "../../temp/uploads", file.name);
@@ -46,6 +48,8 @@ export async function uploadFile(
 
         response.status(200).send({ message: "File uploaded successfully" });
     } catch (err: any) {
-        response.status(500).send({ message: `Error extracting zip file: ${err.message}` });
+        response
+            .status(500)
+            .send({ message: `Error extracting zip file: ${err.message}` });
     }
 }
