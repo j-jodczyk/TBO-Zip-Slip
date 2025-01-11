@@ -44,7 +44,7 @@ export async function uploadFile(
 
     try {
         const zip = new AdmZip(tempZipPath);
-        zip.extractAllTo(tempDir);
+        zip.extractAllTo(tempDir, true);
 
         response.status(200).send({ message: "File uploaded successfully" });
     } catch (err: any) {
